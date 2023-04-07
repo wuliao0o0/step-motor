@@ -1,0 +1,42 @@
+C51 COMPILER V9.54   PROJECT                                                               11/07/2021 16:40:37 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE PROJECT
+OBJECT MODULE PLACED IN .\Objects\project.obj
+COMPILER INVOKED BY: D:\keil\C51\BIN\C51.EXE project.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\proj
+                    -ect.lst) OBJECT(.\Objects\project.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "delay.h"
+   3          #define uint unsigned int
+   4          #define uchar unsigned char
+   5          sbit s17=P3^7;
+   6          sbit s18=P3^6;
+   7          sbit s20=P3^4;
+   8          sbit s21=P3^3;
+   9          
+  10           int key()
+  11          {
+  12   1              int keynumber=0;
+  13   1              if(s17==0){delay(20);if(s17==0){keynumber=1;}}
+  14   1              if(s18==0){delay(20);if(s18==0){keynumber=2;}}
+  15   1              if(s20==0){delay(20);if(s18==0){keynumber=3;}}
+  16   1              if(s21==0){delay(20);if(s18==0){keynumber=4;}}
+  17   1              return keynumber;
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     85    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
